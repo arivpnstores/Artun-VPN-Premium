@@ -6,44 +6,63 @@
   <title>Download Artun VPN Premium</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 50px;
-      background-color: #e9f0f7;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
     }
-    .logo {
-      width: 150px;
-      margin-bottom: 20px;
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 40px;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      animation: fadeIn 1s ease;
+    }
+    h1 {
+      margin-bottom: 10px;
+      font-size: 30px;
+    }
+    p {
+      margin-bottom: 30px;
+      font-size: 16px;
+      color: #ddd;
     }
     .download-button {
       display: inline-block;
-      padding: 15px 30px;
+      padding: 15px 35px;
       font-size: 18px;
       color: #fff;
-      background-color: #28a745;
+      background: linear-gradient(45deg, #00c6ff, #0072ff);
       text-decoration: none;
-      border-radius: 8px;
-      transition: background-color 0.3s;
-      margin-top: 20px;
+      border-radius: 50px;
+      transition: 0.3s;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     }
     .download-button:hover {
-      background-color: #218838;
+      background: linear-gradient(45deg, #0072ff, #00c6ff);
+      transform: scale(1.05);
     }
-    .desc {
-      max-width: 600px;
-      margin: 0 auto;
-      font-size: 16px;
-      color: #333;
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
 
-  <img src="logo.png" alt="Artun VPN Premium" class="logo">
-  <h1>Download Artun VPN Premium</h1>
-  <p class="desc">Aplikasi VPN premium tercepat dan stabil untuk mengakses internet tanpa batas, aman, dan bebas blokir di seluruh jaringan.</p>
-
-  <a href="Artun-VPN-Premium.apk" class="download-button">Download APK Sekarang</a>
+  <div class="card">
+    <h1>Artun VPN Premium</h1>
+    <p>Akses internet tanpa batas, aman dan cepat. Download APK terbaru sekarang juga!</p>
+    <a href="Artun-VPN-Premium.apk" class="download-button">Download Sekarang</a>
+  </div>
 
 </body>
 </html>
