@@ -1,0 +1,254 @@
+/* Google Play Store Style CSS */
+:root {
+  --play-green: #1f8b4e;
+  --play-green-light: #34a853;
+  --play-gray: #5f6368;
+  --play-light-gray: #f8f9fa;
+  --play-border: #dadce0;
+  --play-text: #202124;
+  --play-secondary: #5f6368;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Google Sans', 'Roboto', Arial, sans-serif;
+  background-color: #fff;
+  color: var(--play-text);
+  line-height: 1.5;
+}
+
+/* Header */
+.play-header {
+  background: #fff;
+  border-bottom: 1px solid var(--play-border);
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.play-logo {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--play-green);
+}
+
+/* Main Container */
+.play-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* App Header */
+.app-header {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 32px;
+  align-items: flex-start;
+}
+
+.app-icon {
+  width: 180px;
+  height: 180px;
+  border-radius: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  object-fit: cover;
+}
+
+.app-info {
+  flex: 1;
+}
+
+.app-title {
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.app-developer {
+  font-size: 16px;
+  color: var(--play-secondary);
+  margin-bottom: 16px;
+}
+
+.app-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.stars {
+  color: #fbbc04;
+  font-size: 18px;
+}
+
+.rating-text {
+  color: var(--play-secondary);
+  font-size: 14px;
+}
+
+.install-section {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.install-button {
+  background: var(--play-green);
+  color: white;
+  border: none;
+  padding: 12px 48px;
+  border-radius: 24px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.install-button:hover {
+  background: var(--play-green-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(31, 139, 78, 0.3);
+}
+
+/* Screenshot Gallery */
+.screenshot-section {
+  margin: 32px 0;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.screenshot-gallery {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.screenshot {
+  width: 240px;
+  height: 480px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.screenshot:hover {
+  transform: scale(1.05);
+}
+
+/* Description Section */
+.description-section {
+  margin: 32px 0;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--play-text);
+  max-height: 200px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.description.expanded {
+  max-height: none;
+}
+
+.read-more {
+  color: var(--play-green);
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+/* Reviews Section */
+.reviews-section {
+  margin: 32px 0;
+}
+
+.review {
+  background: var(--play-light-gray);
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.reviewer-name {
+  font-weight: 500;
+}
+
+.review-date {
+  color: var(--play-secondary);
+  font-size: 14px;
+}
+
+.review-rating {
+  color: #fbbc04;
+  margin-bottom: 8px;
+}
+
+/* Additional Info */
+.info-section {
+  margin: 32px 0;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.info-item {
+  background: var(--play-light-gray);
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.info-label {
+  font-size: 14px;
+  color: var(--play-secondary);
+  margin-bottom: 4px;
+}
+
+.info-value {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .app-icon {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .screenshot {
+    width: 180px;
+    height: 360px;
+  }
+}
